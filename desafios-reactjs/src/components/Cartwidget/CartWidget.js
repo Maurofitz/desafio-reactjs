@@ -1,11 +1,11 @@
 import React from "react";
 import './App.css';
-import shoppingCart from "../Assets/img/carrito.png"
+import fotoCarrito from "../../../public/carrito.png";
 
 const cartWidget = () => {
     return (
         <button className="cart-btn">
-            <img src={shoppingCart} alt="img shopping" className="cart-widget" />
+           <img src={fotoCarrito} alt="Shopping Cart" className="cart-widget" />
         </button>
     );
 };

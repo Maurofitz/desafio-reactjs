@@ -28,7 +28,9 @@ const menuItems = [
                 <a href="/" className="nav-item" key={menuItems.id}>{item.label}</a>
               ))}
             </div>
+            <div className="cart">
             <cartWidget/>
+            </div>
         </div>
     );
   };
