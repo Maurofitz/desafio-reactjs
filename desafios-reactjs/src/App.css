@@ -14,19 +14,6 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 .cart-btn {
   background: none;
   color: inherit;
@@ -41,21 +28,11 @@
   width: 1.5rem;
   height: 1.5rem;
 }
-
-.button__badge {
-  background-color: red;
-  border-radius: 50%;
-  color: white;
-  padding: 2px 4px;
-}
-
-.button {
-  font-size: 0.6rem;
-  position: absolute;
-  top: 0.7rem;
-  right: 0.7rem;
-  color: white;
-  display: inline-block;
-  cursor: pointer;
+.landing {
+  width: 100%;
+  height: calc(100vh - 60px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 

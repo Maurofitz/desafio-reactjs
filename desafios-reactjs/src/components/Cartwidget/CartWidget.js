@@ -1,8 +1,7 @@
 import React from "react";
-import './App.css';
-import fotoCarrito from "../../../public/carrito.png";
+import fotoCarrito from "../../Assets/carrito.png";
 
-const cartWidget = () => {
+const CartWidget = () => {
     return (
         <button className="cart-btn">
            <img src={fotoCarrito} alt="Shopping Cart" className="cart-widget" />
@@ -10,4 +9,4 @@ const cartWidget = () => {
     );
 };
 
-export default cartWidget;
+export default CartWidget;

@@ -1,4 +1,5 @@
 import React from "react"
+import CartWidget from "../Cartwidget/CartWidget";
 
 const menuItems = [
     {
@@ -29,7 +30,7 @@ const menuItems = [
               ))}
             </div>
             <div className="cart">
-            <cartWidget/>
+            <CartWidget/>
             </div>
         </div>
     );

@@ -157,13 +157,6 @@
   height: 1.5rem;
 }
 
-.button__badge {
-  background-color: red;
-  border-radius: 50%;
-  color: white;
-  padding: 2px 4px;
-}
-
 .button {
   font-size: 0.6rem;
   position: absolute;
@@ -173,11 +166,10 @@
   display: inline-block;
   cursor: pointer;
 }
-
-@media (max-width: 768px) {
-  .button {
-    top: 0.7rem;
-    right: 3.2rem;
-  }
+.landing {
+  width: 100%;
+  height: calc(100vh - 60px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
