@@ -1,10 +1,9 @@
 import React from "react";
+import ItemCount from "../ItemCount/ItemCount";
 
-const ItemListContainer = ({bienvenido}) => {
+const ItemListContainer = () => {
     return (
-    <div className="landing">
-        <span>{bienvenido}</span>
-        </div>
+    <ItemCount stock = {7}/>
     );
 };
 export default ItemListContainer;
