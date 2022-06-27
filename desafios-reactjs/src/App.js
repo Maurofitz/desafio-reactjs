@@ -1,13 +1,15 @@
 import './App.css';
 import ItemListContainer from '../src/components/ItemListContainer/ItemListContainer';
 import Navbar from "../src/components/Navbar/NavBar";
+import ItemCount from "./components/ItemCount"
 
 
 function App () {
   return (
     <>
       <Navbar/>
-      {/* <ItemListContainer /> */}
+      <ItemListContainer greeting={greeting}/>
+      <ItemCount/>
     </>
   );
 };
