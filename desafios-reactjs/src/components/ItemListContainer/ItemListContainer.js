@@ -1,6 +1,6 @@
-import React from "react";
 import ItemList from "../Itemlist/Itemlist";
 import { getData } from '../API/Api'
+import React, {useEffect, useState} from "react";
 
 const ItemListContainer = ({greeting}) => {
     const [productList, setProductList]= useState([])

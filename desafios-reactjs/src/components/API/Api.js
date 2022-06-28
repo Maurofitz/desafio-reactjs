@@ -6,12 +6,12 @@ import producto5 from "../../Assets/product-05.jpg"
 import producto6 from "../../Assets/product-07.jpg"
 
 const products = [
-    {id:'01', name:'random2',  img:{producto1}, stock:10},
-    {id:'02', name:'random3',  img:{producto2}, stock:8},
-    {id:'03', name:'random4',  img:{producto3}, stock:7},
-    {id:'04', name:'random5',  img:{producto4}, stock:50},
-    {id:'05', name:'random1',  img:{producto5}, stock:2},
-    {id:'06', name:'random6',  img:{producto6}, stock:79},
+    {id:'01', name:'Remera Basica',  img: {producto1}, stock:10},
+    {id:'02', name:'Camisa blanca',  img:{producto2}, stock:8},
+    {id:'03', name:'Camisa',  img:{producto3}, stock:7},
+    {id:'04', name:'Tapado',  img:{producto4}, stock:50},
+    {id:'05', name:'Camisa jean',  img:{producto5}, stock:2},
+    {id:'06', name:'Blazer',  img:{producto6}, stock:79},
   ]
 
   export const getData = new Promise ((resolve, reject) =>{
