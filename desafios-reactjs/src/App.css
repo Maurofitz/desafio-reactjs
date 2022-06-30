@@ -31,4 +31,31 @@
   justify-content: center;
   align-items: center;
 }
-
+.car-wrap{
+	margin-bottom: 40px;
+	-webkit-box-shadow: 0px 5px 12px -1px rgba(0,0,0,0.06);
+	-moz-box-shadow: 0px 5px 12px -1px rgba(0,0,0,0.06);
+	box-shadow: 0px 5px 12px -1px rgba(0,0,0,0.06);
+}
+	.card-photo{
+		width: 100%;
+		height: 220px;
+	}
+	.text{
+		border-top: none;
+		padding: 20px 30px 30px;
+  }
+		h2{
+			font-size: 20px;
+			font-weight: 500;
+			
+		}
+		span.cat{
+			font-weight: 400;
+			color: rgba(0,0,0,.2);
+			display: block;
+			margin-bottom: 0;
+		}
+		p.d-block{
+			width: 100%;	
+		}
