@@ -14,7 +14,7 @@ const products = [
     {id:'06', name:'Blazer',  image:producto6, stock:79},
   ]
 
-  export const getData = new Promise ((resolve, reject) =>{
+export const getData = new Promise ((resolve, reject) =>{
     let condition = true
     setTimeout(()=>{
       if(condition){
@@ -22,5 +22,5 @@ const products = [
       }else{
         reject('salio mal :(')
       }
-    },3000)
+    },1000)
   })

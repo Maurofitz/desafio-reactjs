@@ -1,7 +1,8 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const Item = ({product}) => {
-  const {image, name}= product
+  const {image, name,}= product
   return (
     <section class="ftco-section bg-light">
     	<div class="container">
@@ -79,9 +80,8 @@ const Item = ({product}) => {
 		    						<p class="price"><span>$13420.00</span></p>
 		    					</div>	
 	    					</div>
-    						<p class="bottom-area d-flex px-3">
-    							<p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Ver mas</a> <a href="index.html" class="btn btn-secondary py-2 ml-1">Comprar</a></p>
-    						</p>
+    						<p class="bottom-area d-flex px-3"/>
+							<Link class=" d-flex mb-0 d-block btn btn-primary py-2 mr-1" to={`/detalle/${product.Id}`}>Ver detalle</Link>
     					</div>
     				</div>
     			</div>

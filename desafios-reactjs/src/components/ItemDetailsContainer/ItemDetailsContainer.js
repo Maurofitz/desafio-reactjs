@@ -21,12 +21,14 @@ const ItemDetailContainer = () => {
 
 return (
     <div>
-        {loading ? (
-            <h2>Cargando...</h2>
-        ) : (
-                <ItemDetails product={product} />
-        )}
-    </div>
+            {loading ? (
+                <h2>Cargando...</h2>
+            ) : (
+                <>
+                    <ItemDetails product={product} />
+                </>
+            )}
+        </div>
 );
 };
 export default ItemDetailContainer;
