@@ -3,6 +3,7 @@ import ItemListContainer from '../src/components/ItemListContainer/ItemListConta
 import Navbar from "../src/components/Navbar/NavBar";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import ItemDetailsContainer from '../src/components/ItemDetailsContainer/ItemDetailsContainer';
+import Footer from '../src/components/Footer/Footer';
 
 
 function App () {
@@ -18,6 +19,7 @@ function App () {
                 <Route path="/detalle/:id" element={<ItemDetailsContainer />} />
                 <Route path="/cart" element={<Cart />} />
             </Routes>
+            <Footer/>
         </BrowserRouter>
     );
 };
