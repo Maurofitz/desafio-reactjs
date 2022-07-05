@@ -5,8 +5,8 @@ const Footer = () => (
         <div class="row mb-5">
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2"><a href="#" class="logo">Car<span>book</span></a></h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              <h2 class="ftco-heading-2"><a href="#" class="logo">Original<span>clothes</span></a></h2>
+              <p>tienda Virtual.</p>
             </div>
           </div>
           <div class="col-md">
@@ -38,16 +38,13 @@ const Footer = () => (
             	<h2 class="ftco-heading-2">Have a Questions?</h2>
             	<div class="block-23 mb-3">
 	              <ul>
-	                <li><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-	                <li><a href="#"><span class="text">+2 392 3929 210</span></a></li>
+	                <li><span class="text">BUENOS AIRES - ARGENTINA</span></li>
+	                <li><a href="#"><span class="text">+2 3AS92 3929 210</span></a></li>
 	                <li><a href="#"><span class="text">info@yourdomain.com</span></a></li>
 	              </ul>
 	            </div>
             </div>
           </div>
-        </div>
-        <div class="row">
-
         </div>
       </div>
     </section>
