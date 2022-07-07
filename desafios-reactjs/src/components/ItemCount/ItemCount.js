@@ -1,25 +1,32 @@
-import React, { useState } from "react";
+import React, { useState } from 'react'
 
-const Itemcount = ({stock}) => { 
-const [amout, setAmout] = useState (0)
-const count = (value) => {
-    const result = amout + value
-    if (result<=stock) {
-    setAmout(amout+value)
+const ItemCount = ({ initial, onAdd, stock }) => {
+
+    const [count, setCount] = useState(initial);
+
+    const handlerClickAdd = () => {
+        if (count < stock) {
+            setCount(count + 1);
+        }
     }
-}
-return (
-<div class="col-auto">
-    <ul class="list-inline pb-3">
-        <li class="list-inline-item text-right">
-        Agregar
-        <input type="hidden" name="product-quanity" id="product-quanity" value="1"/>
-        </li>
-        <li onClick={()=>count(-1)} class="list-inline-item"><span class="btn btn-success" id="btn-minus">-</span></li>
-        <li class="list-inline-item"><span class="badge bg-secondary" id="var-value">{amout} {stock} </span></li>
-        <li onClick={()=>count(+1)} class="list-inline-item"><span class="btn btn-success" id="btn-plus">+</span></li>
-    </ul>
-</div>
-)};
 
-export default Itemcount;
+    const handlerClickSubtrack = () => {
+        if (count > 1) {
+            setCount(count - 1);
+        }
+    }
+
+    const handlerClickAddToCart = () => {
+        onAdd(count);
+    }
+
+    return (
+        <>
+            <button onClick={() => handlerClickSubtrack()}>-</button>
+            <h2>{count}</h2>
+            <button onClick={() => handlerClickAdd()}>+</button>
+        </>
+    );
+}
+
+export default ItemCount;

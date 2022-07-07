@@ -1,14 +1,14 @@
-import ItemCount from '../ItemCount/ItemCount';
+import ItemCount from "../ItemCount/ItemCount" ;
+import { Link } from "react-router-dom";
 
 const ItemDetail = ({ product }) => {
-    const {image, name , description , price , stock}= product
     return (
-       <section class="bg-light">
+       <section className="detalle" class="bg-light ">
         <div class="container pb-5" className="detalle">
             <div class="row">
                 <div class="col-lg-5 mt-5">
                     <div class="card mb-3">
-                        <img class="card-img img-fluid" src={image} alt="Card image cap" id="product-detail"/>
+                        <img class="card-img img-fluid" src={product.img} alt="Card image cap" id="product-detail"/>
                     </div>
                     <div class="row">
                         <div id="multi-item-example" class="col-10 carousel slide carousel-multi-item" data-bs-ride="carousel">
@@ -19,17 +19,17 @@ const ItemDetail = ({ product }) => {
                                     <div class="row">
                                         <div class="col-4">
                                             <a href="#">
-                                                <img class="card-img img-fluid" src={image} alt="Product Image 1"/>
+                                                <img class="card-img img-fluid" src={product.image} alt="Product Image 1"/>
                                             </a>
                                         </div>
                                         <div class="col-4">
                                             <a href="#">
-                                                <img class="card-img img-fluid" src={image} alt="Product Image 2"/>
+                                                <img class="card-img img-fluid" src={product.image} alt="Product Image 2"/>
                                             </a>
                                         </div>
                                         <div class="col-4">
                                             <a href="#">
-                                                <img class="card-img img-fluid" src={image} alt="Product Image 3"/>
+                                                <img class="card-img img-fluid" src={product.image} alt="Product Image 3"/>
                                             </a>
                                         </div>
                                     </div>
@@ -40,12 +40,11 @@ const ItemDetail = ({ product }) => {
 
                     </div>
                 </div>
-
                 <div class="col-lg-7 mt-5">
                     <div class="card">
                         <div class="card-body">
-                            <h1 class="h2">{name}</h1>
-                            <p class="h3 py-2">{price}</p>
+                            <h1 class="h2">{product.title}</h1>
+                            <p class="h3 py-2"></p>
                             <p class="py-2">
                                 <i class="fa fa-star text-warning"></i>
                                 <i class="fa fa-star text-warning"></i>
@@ -55,7 +54,7 @@ const ItemDetail = ({ product }) => {
                             </p>
 
                             <h6>Descripcion:</h6>
-                            <p>{description}</p>
+                            <p>{}</p>
                             <ul class="list-inline">
                                 <li class="list-inline-item">
                                     <h6> Colores :</h6>
@@ -89,12 +88,15 @@ const ItemDetail = ({ product }) => {
                                             <li class="list-inline-item"><span class="btn btn-success btn-size">L</span></li>
                                             <li class="list-inline-item"><span class="btn btn-success btn-size">XL</span></li>
                                         </ul>
+                                        
                                     </div>
-                                    <ItemCount stock={stock} initial={1} />
+                                    <ItemCount/>
                                 </div>
                                 <div class="row pb-3">
                                     <div class="col d-grid">
+                                    <Link to="/cart">
                                         <button type="submit" class="btn btn-success btn-lg" name="submit" value="addtocard">Agregar al carrito</button>
+                                    </Link>
                                     </div>
                                 </div>
                             </form>

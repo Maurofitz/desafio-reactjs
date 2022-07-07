@@ -9,7 +9,7 @@ const NavBar = () => {
 		<div class="container">
 		  <div class="row">
 				<div class="col-md-4 d-flex justify-content-center justify-content-md-start mb-3 mb-md-0">
-					<a href="#!" class="ms-md-2">
+					<a href= "index.html" class="ms-md-2">
 						<img src={logo} height="35" />
 					</a>
 				</div>

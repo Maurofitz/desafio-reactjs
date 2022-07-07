@@ -1,23 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import ItemDetails from '../Item/ItemDetails';
+import ItemDetails from '../ItemDetails/ItemDetails';
 
 const ItemDetailContainer = () => {
     const [product, setProduct] = useState({});
     const [loading, setLoading] = useState(true);
+    const { productId } = useParams();
 
-    const { id } = useParams();
-
-    useEffect(() => {
-        setLoading(true);
-        const URL = `https://fakestoreapi.com/products/${id}`;
-        fetch(URL)
-            .then((res) => res.json())
-            .then((json) => setProduct(json))
-            .finally(() => {
-                setLoading(false);
-            });
-}, [id])
+     useEffect(() => {
+        fetch(`https://fakestoreapi.com/products/${productId}`)
+            .then(res=>res.json())
+            .then(data=>setProduct(data))
+            .catch(err=>console.log(err))
+            .finally(()=>setLoading(false))
+    }, [productId]);
 
 return (
     <div>

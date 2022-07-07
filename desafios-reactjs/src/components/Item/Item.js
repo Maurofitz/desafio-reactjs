@@ -23,11 +23,11 @@ const Item = ({product}) => {
     						<h3><a href="#">{name}</a></h3>
     						<div class="d-flex">
     							<div class="pricing">
-		    						<p class="price"><span class="mr-2 price-dc">$120.00</span><span class="price-sale">$80.00</span></p>
+		    						<p class="price"><span class="mr-2 price-dc">$120.00</span><span class="price-sale"></span></p>
 		    					</div>
 	    					</div>
 	    					<p class="bottom-area d-flex px-3">
-							<p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Ver mas</a> <a href="index.html" class="btn btn-secondary py-2 ml-1">Comprar</a></p>
+							<Link class=" d-flex mb-0 d-block btn btn-primary py-2 mr-1" to={`/detalle/${product.Id}`}>Ver detalle</Link>
     						</p>
     					</div>
     				</div>
@@ -45,7 +45,7 @@ const Item = ({product}) => {
 		    					</div>	
 	    					</div>
     						<p class="bottom-area d-flex px-3">
-							<p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Ver mas</a> <a href="index.html" class="btn btn-secondary py-2 ml-1">Comprar</a></p>
+							<Link class=" d-flex mb-0 d-block btn btn-primary py-2 mr-1" to={`/detalle/${product.Id}`}>Ver detalle</Link>
     						</p>
     					</div>
     				</div>
@@ -63,7 +63,7 @@ const Item = ({product}) => {
 		    					</div>	
 	    					</div>
     						<p class="bottom-area d-flex px-3">
-							<p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Ver mas</a> <a href="index.html" class="btn btn-secondary py-2 ml-1">Comprar</a></p>
+							<Link class=" d-flex mb-0 d-block btn btn-primary py-2 mr-1" to={`/detalle/${product.Id}`}>Ver detalle</Link>
     						</p>
     					</div>
     				</div>
