@@ -10,11 +10,10 @@ const ItemDetailContainer = () => {
      useEffect(() => {
         fetch(`https://fakestoreapi.com/products/${productId}`)
             .then(res=>res.json())
-            .then(data=>setProduct(data))
+            .then(data=> setProduct(data))          
             .catch(err=>console.log(err))
             .finally(()=>setLoading(false))
     }, [productId]);
-
 return (
     <div>
             {loading ? (
@@ -26,5 +25,6 @@ return (
             )}
         </div>
 );
+
 };
 export default ItemDetailContainer;

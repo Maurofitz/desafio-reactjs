@@ -22,9 +22,11 @@ const ItemCount = ({ initial, onAdd, stock }) => {
 
     return (
         <>
-            <button onClick={() => handlerClickSubtrack()}>-</button>
+            <button type="submit" class="btn btn-success btn-lg" name="submit" value="addtocard" onClick={() => handlerClickSubtrack()}>-</button>
             <h2>{count}</h2>
-            <button onClick={() => handlerClickAdd()}>+</button>
+            <button type="submit" class="btn btn-success btn-lg" name="submit" value="addtocard" onClick={() => handlerClickAdd()}>+</button>
+            <br />
+            <button type="submit" class="btn btn-danger btn-lg" name="submit" value="addtocard" onClick={() => handlerClickAddToCart()}>Agregar al carrito</button>
         </>
     );
 }

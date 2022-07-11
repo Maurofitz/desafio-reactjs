@@ -2,7 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 
 const Item = ({product}) => {
-  const {image, name,}= product
+  const {image, name, id}= product
+  console.log(product)
   return (
     <section class="ftco-section bg-light">
     	<div class="container">
@@ -27,7 +28,7 @@ const Item = ({product}) => {
 		    					</div>
 	    					</div>
 	    					<p class="bottom-area d-flex px-3">
-							<Link class=" d-flex mb-0 d-block btn btn-primary py-2 mr-1" to={`/detalle/${product.Id}`}>Ver detalle</Link>
+							<Link class=" d-flex mb-0 d-block btn btn-primary py-2 mr-1" to={`/detalle/${id}`}>Ver detalle</Link>
     						</p>
     					</div>
     				</div>
@@ -45,7 +46,7 @@ const Item = ({product}) => {
 		    					</div>	
 	    					</div>
     						<p class="bottom-area d-flex px-3">
-							<Link class=" d-flex mb-0 d-block btn btn-primary py-2 mr-1" to={`/detalle/${product.Id}`}>Ver detalle</Link>
+							<Link class=" d-flex mb-0 d-block btn btn-primary py-2 mr-1" to={`/detalle/${id}`}>Ver detalle</Link>
     						</p>
     					</div>
     				</div>
@@ -63,7 +64,7 @@ const Item = ({product}) => {
 		    					</div>	
 	    					</div>
     						<p class="bottom-area d-flex px-3">
-							<Link class=" d-flex mb-0 d-block btn btn-primary py-2 mr-1" to={`/detalle/${product.Id}`}>Ver detalle</Link>
+							<Link class=" d-flex mb-0 d-block btn btn-primary py-2 mr-1" to={`/detalle/${id}`}>Ver detalle</Link>
     						</p>
     					</div>
     				</div>
@@ -81,7 +82,7 @@ const Item = ({product}) => {
 		    					</div>	
 	    					</div>
     						<p class="bottom-area d-flex px-3"/>
-							<Link class=" d-flex mb-0 d-block btn btn-primary py-2 mr-1" to={`/detalle/${product.Id}`}>Ver detalle</Link>
+							<Link class=" d-flex mb-0 d-block btn btn-primary py-2 mr-1" to={`/detalle/${id}`}>Ver detalle</Link>
     					</div>
     				</div>
     			</div>

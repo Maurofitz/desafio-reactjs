@@ -6,7 +6,7 @@ import logoslide3 from "../../Assets/slide-03.jpg"
 const slider = () => {
     return (
       <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
+  <div class="carousel-inner .container-xl">
     <div class="carousel-item active">
       <img src={logoslide1} class="d-block w-100" alt="portada1"/>
     </div>

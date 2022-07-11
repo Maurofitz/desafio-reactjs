@@ -1,14 +1,25 @@
 import ItemCount from "../ItemCount/ItemCount" ;
 import { Link } from "react-router-dom";
+import React, { useEffect, useState } from 'react'
+
+
+
 
 const ItemDetail = ({ product }) => {
+    const [buyFinalized, setBuyfinalized] = useState (true)
+    const onAdd = (count) => {
+        console.log(count)
+        setBuyfinalized (false);
+        
+}
+
     return (
        <section className="detalle" class="bg-light ">
         <div class="container pb-5" className="detalle">
             <div class="row">
-                <div class="col-lg-5 mt-5">
-                    <div class="card mb-3">
-                        <img class="card-img img-fluid" src={product.img} alt="Card image cap" id="product-detail"/>
+                <div class="col-lg-3 mt-2">
+                    <div class="card mb-2">
+                        <img class="card-img img-fluid" src={product.image} alt="Card image cap" id="product-detail"/>
                     </div>
                     <div class="row">
                         <div id="multi-item-example" class="col-10 carousel slide carousel-multi-item" data-bs-ride="carousel">
@@ -75,7 +86,7 @@ const ItemDetail = ({ product }) => {
                                 <li>Excepteur sint</li>
                             </ul>
 
-                            <form action="" method="GET">
+                            <div>
                                 <input type="hidden" name="product-title" value="Activewear"/>
                                 <div class="row">
                                     <div class="col-auto">
@@ -90,17 +101,17 @@ const ItemDetail = ({ product }) => {
                                         </ul>
                                         
                                     </div>
-                                    <ItemCount/>
+                                  
                                 </div>
                                 <div class="row pb-3">
                                     <div class="col d-grid">
-                                    <Link to="/cart">
+                                    {buyFinalized ? <ItemCount initial={1} onAdd={onAdd} stock={10}/>: <Link to="/cart"><button type="submit" class="btn btn-success btn-lg"> Finalizar compra </button></Link>}
+                                    {/* <Link to="/cart">
                                         <button type="submit" class="btn btn-success btn-lg" name="submit" value="addtocard">Agregar al carrito</button>
-                                    </Link>
+                                    </Link> */}
                                     </div>
                                 </div>
-                            </form>
-
+                            </div> 
                         </div>
                     </div>
                 </div>
