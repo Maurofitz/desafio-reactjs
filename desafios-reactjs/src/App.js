@@ -6,10 +6,12 @@ import ItemDetailsContainer from '../src/components/ItemDetailsContainer/ItemDet
 import Slider from './components/slider/Slider';
 import Footer from './components/Footer/Footer';
 import Cart from '../src/components/Cart/Cart'
+import CartCustomProvider from '../src/components/Context/Context'
 
 function App () {
   return (
     <BrowserRouter>
+      <CartCustomProvider>
             <Navbar path="App" />
             <Slider />
             <Routes>
@@ -18,7 +20,8 @@ function App () {
             <Route path="/detalle/:productId" element={<ItemDetailsContainer />}/>
             <Route path="/cart" element={<Cart />} />
             </Routes>
-           <Footer/>    
+           <Footer/>
+      </CartCustomProvider>    
         </BrowserRouter>
     );
 };
