@@ -1,9 +1,11 @@
 
 import { Link } from 'react-router-dom';
+import { cartContext } from "../Context/Context";
+import React, { useContext } from 'react'
 
 const Item = ({product}) => {
-  const {image, name, id}= product
-  console.log(product)
+  const {image, name, id , price}= product
+
   return (
     <section class="ftco-section bg-light">
     	<div class="container">
@@ -24,12 +26,13 @@ const Item = ({product}) => {
     						<h3><a href="#">{name}</a></h3>
     						<div class="d-flex">
     							<div class="pricing">
-		    						<p class="price"><span class="mr-2 price-dc">$120.00</span><span class="price-sale"></span></p>
+		    						<p class="price"><span class="mr-2 price-dc">${price}</span><span class="price-sale"></span></p>
 		    					</div>
 	    					</div>
 	    					<p class="bottom-area d-flex px-3">
 							<Link class=" d-flex mb-0 d-block btn btn-primary py-2 mr-1" to={`/detalle/${id}`}>Ver detalle</Link>
     						</p>
+							
     					</div>
     				</div>
     			</div>
@@ -42,12 +45,13 @@ const Item = ({product}) => {
     						<h3><a href="#">{name}</a></h3>
     						<div class="d-flex">
     							<div class="pricing">
-		    						<p class="price"><span>$120.00</span></p>
+		    						<p class="price"><span>${price}</span></p>
 		    					</div>	
 	    					</div>
     						<p class="bottom-area d-flex px-3">
 							<Link class=" d-flex mb-0 d-block btn btn-primary py-2 mr-1" to={`/detalle/${id}`}>Ver detalle</Link>
     						</p>
+							
     					</div>
     				</div>
     			</div>
@@ -60,12 +64,13 @@ const Item = ({product}) => {
     						<h3><a href="#">{name}</a></h3>
     						<div class="d-flex">
     							<div class="pricing">
-		    						<p class="price"><span>$23420.00</span></p>
+		    						<p class="price"><span>${price}</span></p>
 		    					</div>	
 	    					</div>
     						<p class="bottom-area d-flex px-3">
 							<Link class=" d-flex mb-0 d-block btn btn-primary py-2 mr-1" to={`/detalle/${id}`}>Ver detalle</Link>
     						</p>
+							
     					</div>
     				</div>
     			</div>
@@ -78,11 +83,13 @@ const Item = ({product}) => {
     						<h3><a href="#">{name}</a></h3>
     						<div class="d-flex">
     							<div class="pricing">
-		    						<p class="price"><span>$13420.00</span></p>
+		    						<p class="price"><span>${price}</span></p>
 		    					</div>	
 	    					</div>
-    						<p class="bottom-area d-flex px-3"/>
+    						<p class="bottom-area d-flex px-3">
 							<Link class=" d-flex mb-0 d-block btn btn-primary py-2 mr-1" to={`/detalle/${id}`}>Ver detalle</Link>
+							</p>
+													
     					</div>
     				</div>
     			</div>

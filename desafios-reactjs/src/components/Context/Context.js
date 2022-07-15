@@ -40,6 +40,9 @@ const CartCustomProvider = ({children}) => {
         setproducts ([]);
         setQtyProduct(0);
     };
+    
+
+   
     return (
         <Provider value ={{ products, addProduct,removeItem,isInCart,getQtyProduct,clear,qtyProduct}}>
             {children}
@@ -48,4 +51,3 @@ const CartCustomProvider = ({children}) => {
 }
 
 export default CartCustomProvider;
-/* {title,id,stock,urlpicture,description,price,qty } */
