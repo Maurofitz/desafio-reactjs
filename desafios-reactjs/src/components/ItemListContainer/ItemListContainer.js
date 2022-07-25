@@ -14,18 +14,19 @@ const ItemListContainer = ({greeting}) => {
 
    useEffect(() => {
     setLoading(true);
-    const productsCollection = collection (db , 'productos' );
-    const q = query (productsCollection, where( 'productos' , '==' , 'hombre' ))
-  
-    getDocs (q)
-    .then(result => {
-      const lista = result.docs.maps(product => {
-        return {
-          id: product.id,
-          ...product.data(),
-        }
-      })
-        setProducts(lista);
+    const q = categoryId
+        ? query(collection(db, 'productos'), where('categoria', '==', categoryId))
+        : collection(db, 'productos');
+        
+    getDocs(q)
+        .then(result => {
+            const lista = result.docs.map(doc => {
+                return {
+                    id: doc.id,
+                    ...doc.data(),
+                }
+            })
+            setProducts(lista);
     })
     .finally(() => setLoading(false));
   }, [categoryId])

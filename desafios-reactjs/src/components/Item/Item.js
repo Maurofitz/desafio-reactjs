@@ -4,7 +4,7 @@ import { cartContext } from "../Context/Context";
 import React, { useContext } from 'react'
 
 const Item = ({product}) => {
-  const {image, name, id , price}= product
+  const {image, title, id , price}= product
 
   return (
     <section class="ftco-section bg-light">
@@ -23,7 +23,7 @@ const Item = ({product}) => {
     						<div class="overlay"></div>
     					</a>
     					<div class="text py-3 px-3">
-    						<h3><a href="#">{name}</a></h3>
+    						<h3><a href="#">{title}</a></h3>
     						<div class="d-flex">
     							<div class="pricing">
 		    						<p class="price"><span class="mr-2 price-dc">${price}</span><span class="price-sale"></span></p>
@@ -42,7 +42,7 @@ const Item = ({product}) => {
     						<div class="overlay"></div>
     					</a>
     					<div class="text py-3 px-3">
-    						<h3><a href="#">{name}</a></h3>
+    						<h3><a href="#">{title}</a></h3>
     						<div class="d-flex">
     							<div class="pricing">
 		    						<p class="price"><span>${price}</span></p>
@@ -61,7 +61,7 @@ const Item = ({product}) => {
 	    					<div class="overlay"></div>
 	    				</a>
     					<div class="text py-3 px-3">
-    						<h3><a href="#">{name}</a></h3>
+    						<h3><a href="#">{title}</a></h3>
     						<div class="d-flex">
     							<div class="pricing">
 		    						<p class="price"><span>${price}</span></p>
@@ -80,7 +80,7 @@ const Item = ({product}) => {
     						<div class="overlay"></div>
     					</a>
     					<div class="text py-3 px-3">
-    						<h3><a href="#">{name}</a></h3>
+    						<h3><a href="#">{title}</a></h3>
     						<div class="d-flex">
     							<div class="pricing">
 		    						<p class="price"><span>${price}</span></p>
