@@ -15,7 +15,7 @@ const ItemListContainer = ({greeting}) => {
    useEffect(() => {
     setLoading(true);
     const q = categoryId
-        ? query(collection(db, 'productos'), where('categoria', '==', categoryId))
+        ? query(collection(db, 'productos'), where('category', '==', categoryId))
         : collection(db, 'productos');
         
     getDocs(q)

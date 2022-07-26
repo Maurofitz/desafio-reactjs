@@ -1,18 +1,18 @@
 import ItemCount from "../ItemCount/ItemCount" ;
 import { Link } from "react-router-dom";
-import React, { useEffect, useState, useContext } from 'react'
+import React, { useState, useContext } from 'react'
 import { cartContext } from "../Context/Context";
 
 
 
 
 const ItemDetail = ({ product }) => {
-    const [buyFinalized, setBuyfinalized] = useState (true)
+    const [buyFinalized, setBuyfinalized] = useState (false)
     const { addProduct } = useContext(cartContext);
 
     const onAdd = (count) => {
         addProduct ({...product, qty :count})
-        setBuyfinalized (false);
+        setBuyfinalized (true);
         
         
 }
@@ -69,7 +69,7 @@ const ItemDetail = ({ product }) => {
                             </p>
 
                             <h6>Descripcion:</h6>
-                            <p>{}</p>
+                            <p>{product.description}</p>
                             <ul class="list-inline">
                                 <li class="list-inline-item">
                                     <h6> Colores :</h6>
@@ -109,10 +109,11 @@ const ItemDetail = ({ product }) => {
                                 </div>
                                 <div class="row pb-3">
                                     <div class="col d-grid">
-                                    {buyFinalized ? <ItemCount initial={1} onAdd={onAdd} stock={10}/>: <Link to="/cart"><button type="submit" class="btn btn-success btn-lg"> Finalizar compra </button></Link>}
-                                    {/* <Link to="/cart">
-                                        <button type="submit" class="btn btn-success btn-lg" name="submit" value="addtocard">Agregar al carrito</button>
-                                    </Link> */}
+                                    {buyFinalized
+                                    ? <Link to="/cart">
+                                        <button type="submit" class="btn btn-success btn-lg">Finalizar compra</button>
+                                        </Link>
+                                    : <ItemCount initial={1} stock={5} onAdd={onAdd} />}
                                     </div>
                                 </div>
                             </div> 
