@@ -5,10 +5,7 @@ import { Link, NavLink } from "react-router-dom";
   
 const NavBar = () => {
 	const categories = [
-        { name: "electronics", id: 0, route: "/category/electronics" },
-        { name: "jewelery", id: 1, route: "/category/jewelery" },
-        { name: "men's clothing", id: 2, route: "/category/men's clothing" },
-        { name: "women's clothing", id: 3, route: "/category/women's clothing" },
+        { name: "home", id: 0, route: <Link to="/cart"><CartWidget /></Link> },
     ];
 
     return (
@@ -42,18 +39,15 @@ const NavBar = () => {
 	<section class="navbar navbar-expand-lg navbar-light bg-white">
 	<div class="container justify-content-center justify-content-md-between">
 		<ul class="navbar-nav flex-row">
-			<li class="nav-item me-3 me-lg-0 d-none d-md-inline-block">
-			{categories.map((category) => <NavLink key={category.id} to={category.route}>{category.name}</NavLink>)}
-			</li>
-			 {/* <li class="nav-item me-3 me-lg-0 d-none d-md-inline-block">
-			<a class="nav-link" href="#">About</a>
+			 <li class="nav-item me-3 me-lg-0 d-none d-md-inline-block">
+			<div class="nav-link" href="">About</div> 
 			</li>
 			<li class="nav-item me-3 me-lg-0 d-none d-md-inline-block">
 			<a class="nav-link" href="#">Shop</a>
 			</li>
 			<li class="nav-item me-3 me-lg-0 d-none d-md-inline-block">
 			<a class="nav-link" href="#">contact</a>
-			</li> */}
+			</li>
 		</ul>
 	</div>
 	</section>
