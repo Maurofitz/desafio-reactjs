@@ -2,82 +2,30 @@
 import { Link } from 'react-router-dom';
 import { cartContext } from "../Context/Context";
 import React, { useContext } from 'react'
+import "../Item/item.css"
 
 const Item = ({product}) => {
-  const {image, title, id , price}= product
-
-  return (
-    <section class="ftco-section bg-light">
-    	<div class="container">
-				<div class="row justify-content-center mb-3 pb-3">
-          <div class="col-md-12 heading-section text-center ftco-animate">
-            {/* <h2 class="mb-4">nueva coleccion</h2>   */}
-          </div>
-        </div>   		
-    	</div>
-    	<div class="container">
-    		<div class="row">
-    			<div class="col-sm col-md-6 col-lg ftco-animate">
-    				<div class="product">
-    					<a href="#" class="img-prod"> <img class="img-fluid" src={image} alt="Colorlib Template"/>
-    						<div class="overlay"></div>
-    					</a>
-    					<div class="text py-3 px-3">
-    						<h3><a href="#">{title}</a></h3>
-    						<div class="d-flex">
-    							<div class="pricing">
-		    						<p class="price"><span class="mr-2 price-dc">${price}</span><span class="price-sale"></span></p>
-		    					</div>
-	    					</div>
-	    					<p class="bottom-area d-flex px-3">
-							<Link class=" d-flex mb-0 d-block btn btn-primary py-2 mr-1" to={`/detalle/${id}`}>Ver detalle</Link>
-    						</p>
-							
-    					</div>
-    				</div>
-    			</div>
-    			<div class="col-sm col-md-6 col-lg ftco-animate">
-    				<div class="product">
-    					<a href="#" class="img-prod"><img class="img-fluid" src={image} alt="Colorlib Template"/>
-    						<div class="overlay"></div>
-    					</a>
-    					<div class="text py-3 px-3">
-    						<h3><a href="#">{title}</a></h3>
-    						<div class="d-flex">
-    							<div class="pricing">
-		    						<p class="price"><span>${price}</span></p>
-		    					</div>	
-	    					</div>
-    						<p class="bottom-area d-flex px-3">
-							<Link class=" d-flex mb-0 d-block btn btn-primary py-2 mr-1" to={`/detalle/${id}`}>Ver detalle</Link>
-    						</p>
-							
-    					</div>
-    				</div>
-    			</div>
-    			<div class="col-sm col-md-6 col-lg ftco-animate">
-    				<div class="product">
-    					<a href="#" class="img-prod"><img class="img-fluid" src={image} alt="Colorlib Template"/>
-	    					<div class="overlay"></div>
-	    				</a>
-    					<div class="text py-3 px-3">
-    						<h3><a href="#">{title}</a></h3>
-    						<div class="d-flex">
-    							<div class="pricing">
-		    						<p class="price"><span>${price}</span></p>
-		    					</div>	
-	    					</div>
-    						<p class="bottom-area d-flex px-3">
-							<Link class=" d-flex mb-0 d-block btn btn-primary py-2 mr-1" to={`/detalle/${id}`}>Ver detalle</Link>
-    						</p>
-							
-    					</div>
-    				</div>
-    			</div> 		
-    		</div>
-    	</div>
-    </section>
-  )
-};
-
-export default Item;
+	const {image, title, id , price}= product
+  
+	return (
+	<div className="containerCard" class="container">   
+		<div class="row">
+		<div className="card" class="col-xxl-4">
+			<div class="card text-white text-center mb-3">
+			<div class="card-body">
+				<h5 class="text-dark text-wrap fs-3 card-title">{title}</h5>
+				<a href="#" class="img-prod"/> <img class="img-fluid" src={image} alt="Colorlib Template"/>
+				<p class="price"><span class="text-dark mr-2 price-dc">${price}</span><span class="price-sale"></span></p>
+				<p class="bottom-area d-flex px-3">
+					<Link class=" align-middle d-flex mb-0 d-block btn btn-primary py-2 mr-1" to={`/detalle/${id}`}>Ver detalle</Link>
+				</p>
+			</div>
+			</div>
+		</div>
+		</div>
+	</div>	  
+	)
+  };
+  
+  export default Item;
+  

@@ -1,0 +1,15 @@
+
+.col-xxl- {
+
+  float: left;
+
+  width: 20%;
+
+}
+.containerCard{
+    display: inline-block;
+ }
+ .card{
+    display: inline-flex;
+    flex-direction: column;
+ }
