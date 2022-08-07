@@ -1,6 +1,7 @@
 import React, { useContext, Component} from 'react'
 import { cartContext } from "../Context/Context";
 import { Link , useNavigate } from "react-router-dom";
+import "../Cart/cart.css"
 
 
 const Cart = () => {
@@ -10,10 +11,12 @@ const Cart = () => {
   if (products.length === 0) {
     return (
       <>
-      <h4>Aún no has agregado ningún producto al carrito</h4>
+      <div className="carritoVacio">
+       <h4>Aún no has agregado ningún producto al carrito</h4>
             <Link to={'/'}>
               <button class=" d-flex mb-0 d-block btn btn-success py-2 mr-1">Ir al catalogo</button>
             </Link>
+      </div>      
       </>
     )
   }
@@ -56,22 +59,20 @@ const Cart = () => {
                    </tbody>
                  </table>                
                </div>
-             </form>
-             <section className="d-flex flex-row justify-content-end mb-5">
-              <h4>Total ${calcularTotal()}.-</h4>    
-              <Link to="/Final">
-                        <button type="submit" class="btn btn-success btn-lg">Finalizar compra</button>
-              </Link>
-          </section>
+             </form>   
            </div>
            </div>
          </div>   
         ))}
     </div>
+<section className="d-flex flex-row justify-content-end mb-5">
+              <h4>Total ${calcularTotal()}.-</h4>    
+              <Link to='/Final'>
+                        <button type="submit" class="btn btn-success btn-lg">Finalizar compra</button>
+              </Link>
+</section>    
 </div>
-);
 
-};
-
+);};
 
 export default Cart;

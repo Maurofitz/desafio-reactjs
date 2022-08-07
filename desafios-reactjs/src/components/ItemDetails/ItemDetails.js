@@ -18,8 +18,8 @@ const ItemDetail = ({ product }) => {
 }
 
     return (
-       <section className="detalle" class="bg-light ">
-        <div class="container pb-5" className="detalle">
+       <section className="detalle" class="bg-light" >
+        <div class="container pb-5 align-middle" className="detalle">
             <div class="row">
                 <div class="col-lg-3 mt-2">
                     <div class="card mb-2">
@@ -74,27 +74,15 @@ const ItemDetail = ({ product }) => {
                                 <li class="list-inline-item">
                                     <h6> Colores :</h6>
                                 </li>
-                                <li class="list-inline-item">
+                                <li class="list-inline-item ">
                                     <p class="text-muted"><strong>White / Black</strong></p>
                                 </li>
                             </ul>
-
-                            <h6>Especificaciones:</h6>
-                            <ul class="list-unstyled pb-3">
-                                <li>Lorem ipsum dolor sit</li>
-                                <li>Amet, consectetur</li>
-                                <li>Adipiscing elit,set</li>
-                                <li>Duis aute irure</li>
-                                <li>Ut enim ad minim</li>
-                                <li>Dolore magna aliqua</li>
-                                <li>Excepteur sint</li>
-                            </ul>
-
                             <div>
                                 <input type="hidden" name="product-title" value="Activewear"/>
                                 <div class="row">
                                     <div class="col-auto">
-                                        <ul class="list-inline pb-3">
+                                        <ul class="list-inline pb-3 align-middle" >
                                             <li class="list-inline-item">TALLE :
                                                 <input type="hidden" name="product-size" id="product-size" value="S"/>
                                             </li>
@@ -105,7 +93,6 @@ const ItemDetail = ({ product }) => {
                                         </ul>
                                         
                                     </div>
-                                  
                                 </div>
                                 <div class="row pb-3">
                                     <div class="col d-grid">

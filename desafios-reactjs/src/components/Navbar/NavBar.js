@@ -2,12 +2,12 @@ import React from "react"
 import CartWidget from "../Cartwidget/CartWidget";
 import logo from "../../Assets/logo.png"
 import { Link, NavLink } from "react-router-dom";
-  
+import "../Navbar/Navbar.css"
+
 const NavBar = () => {
 	const categories = [
         { name: "home", id: 0, route: <Link to="/cart"><CartWidget /></Link> },
     ];
-
     return (
 <section>
 	<div class="p-3 text-center bg-white border-bottom">
@@ -39,15 +39,47 @@ const NavBar = () => {
 	<section class="navbar navbar-expand-lg navbar-light bg-white">
 	<div class="container justify-content-center justify-content-md-between">
 		<ul class="navbar-nav flex-row">
-			 <li class="nav-item me-3 me-lg-0 d-none d-md-inline-block">
+		<li class="nav-item me-3 me-lg-0 d-none d-md-inline-block"></li>
+		<li className="nav-item me-3 me-lg-0 d-none d-md-inline-block ">
+              <NavLink
+                exact
+                to="/"
+                activeClassName="selected"
+                className="nav-links"
+              >
+                Home
+              </NavLink>
+            </li>
+            <li className="nav-item me-3 me-lg-0 d-none d-md-inline-block">
+              <NavLink
+                exact
+                to="/category/Hombre"
+                activeClassName="selected"
+                className="nav-links"
+              >
+                Hombre
+              </NavLink>
+            </li>
+            <li className="nav-item me-3 me-lg-0 d-none d-md-inline-block">
+              <NavLink
+                exact
+                to="/category/Mujer"
+                activeClassName="selected"
+                className="nav-links"               
+              >
+                Mujer
+              </NavLink>
+			</li>
+			 {/* <li class="nav-item me-3 me-lg-0 d-none d-md-inline-block">
 			<div class="nav-link" href="">About</div> 
 			</li>
-			<li class="nav-item me-3 me-lg-0 d-none d-md-inline-block">
+			 <li class="nav-item me-3 me-lg-0 d-none d-md-inline-block">
 			<a class="nav-link" href="#">Shop</a>
 			</li>
 			<li class="nav-item me-3 me-lg-0 d-none d-md-inline-block">
 			<a class="nav-link" href="#">contact</a>
-			</li>
+			</li> */}
+
 		</ul>
 	</div>
 	</section>

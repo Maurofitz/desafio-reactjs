@@ -1,0 +1,13 @@
+.nav-item {
+    line-height: 50px;
+    margin-right: 1rem;
+    
+  }
+.nav-links{
+    color: black;
+    padding: 0px 5px;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}

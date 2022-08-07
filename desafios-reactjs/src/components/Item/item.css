@@ -1,15 +1,27 @@
+.card1{
+   display: inline-flex;
+   flex-direction: column;
+   color: rgb(15, 15, 15);
+   background:rgb(240, 236, 236);
+   text-align: center;
+   border-width: 10px;
+   filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7)); 
+   margin: 20px;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   font-size: large;
+   width: 20rem;
+   justify-content: center;
+   } 
 
-.col-xxl- {
+   .img1{
+      width: 20rem;
+      height: 25rem;
+  }
 
-  float: left;
-
-  width: 20%;
-
-}
-.containerCard{
-    display: inline-block;
- }
- .card{
-    display: inline-flex;
-    flex-direction: column;
- }
+  .divItems {
+      display: grid;
+      justify-content: center;
+      display: inline-block;
+      margin-left: 60px;
+  }
+  

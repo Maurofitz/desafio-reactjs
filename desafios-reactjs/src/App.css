@@ -2,7 +2,7 @@
   text-align: center;
 }
 .App-logo {
-  height: 40vmin;
+  height: 15px;
   pointer-events: none;
 }
 .App-header {
@@ -13,15 +13,10 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
 }
-.cart-btn {
-  cursor: pointer;
-  outline: inherit;
-  width: 1.5rem;
-  height: 1.5rem;
-}
+
 
 .cart-widget {
-  width: 1.5rem;
+  width: 1.4rem;
   height: 1.5rem;
 }
 .landing {
@@ -31,12 +26,7 @@
   justify-content: center;
   align-items: center;
 }
-.car-wrap{
-	margin-bottom: 40px;
-	-webkit-box-shadow: 0px 5px 12px -1px rgba(0,0,0,0.06);
-	-moz-box-shadow: 0px 5px 12px -1px rgba(0,0,0,0.06);
-	box-shadow: 0px 5px 12px -1px rgba(0,0,0,0.06);
-}
+
 	.card-photo{
 		width: 100%;
 		height: 220px;
@@ -52,7 +42,6 @@
 		}
 		span.cat{
 			font-weight: 400;
-			color: rgba(0,0,0,.2);
 			display: block;
 			margin-bottom: 0;
 		}
